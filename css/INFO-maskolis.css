@@ -1,0 +1,14 @@
+.panel{position:fixed;top:0px;left:0;background:#000;-moz-border-radius-topright:10px;-webkit-border-top-right-radius:10px;-moz-border-radius-bottomright:10px;-webkit-border-bottom-right-radius:10px;border:1px solid #444;width:10%;height:auto;filter:alpha(opacity=85);-moz-opacity:0.85;opacity:0.85;display:none;padding:10px 30px 30px 30px}
+.panel p{color:#ccc;margin:0 0 15px;padding:0}
+.panel a,.panel a:visited{color:#9FC54E;text-decoration:none;border-bottom:1px solid #9FC54E;margin:0;padding:0}
+.panel a:hover,.panel a:visited:hover{color:#fff;text-decoration:none;border-bottom:1px solid #fff;margin:0;padding:0}
+a.trigger{position:fixed;text-decoration:none;top:50px;left:0;font-size:16px;letter-spacing:-1px;font-family:verdana, helvetica, arial, sans-serif;color:#fff;font-weight:700;background:#333 url(http://lh6.ggpht.com/_xcD4JK_dIjU/S4QDwX8gRPI/AAAAAAAAD2U/TdhwLYRRzzA/d/plus.png) 85% 55% no-repeat;border:1px solid #444;-moz-border-radius-topright:10px;-webkit-border-top-right-radius:10px;-moz-border-radius-bottomright:10px;-webkit-border-bottom-right-radius:10px;-moz-border-radius-bottomleft:0;-webkit-border-bottom-left-radius:0;display:block;padding:15px 14px 15px 15px}
+a.trigger:hover{position:fixed;text-decoration:none;top:50px;left:0;font-size:16px;letter-spacing:-1px;font-family:verdana, helvetica, arial, sans-serif;color:#fff;font-weight:700;background:#222 url(http://lh6.ggpht.com/_xcD4JK_dIjU/S4QDwX8gRPI/AAAAAAAAD2U/TdhwLYRRzzA/d/plus.png) 85% 55% no-repeat;border:1px solid #444;-moz-border-radius-topright:10px;-webkit-border-top-right-radius:10px;-moz-border-radius-bottomright:10px;-webkit-border-bottom-right-radius:10px;-moz-border-radius-bottomleft:0;-webkit-border-bottom-left-radius:0;display:block;padding:15px 40px 15px 15px}
+a.active.trigger{background:#222 url(http://lh3.ggpht.com/_xcD4JK_dIjU/S4QDvxbreOI/AAAAAAAAD2M/Cz3Q2r5pdTM/d/minus.png) 85% 55% no-repeat}
+.columns{clear:both;width:330px;line-height:22px;padding:0 0 20px}
+.colleft{float:left;width:130px;line-height:22px}
+.colright{float:right;width:130px;line-height:22px}
+a:focus{outline:none}
+.panel img{background-color:#262626;border:1px solid #333;float:right;margin:3px 3px 6px 8px;padding:5px}
+.panel h3{border-bottom:1px solid silver;margin-bottom:5px;padding-bottom:3px;text-align:left;clear:both;color:#FFF;font-size:12px;font-weight:700}
+.columns ul,.columns ul li{list-style-type:none;margin:0;padding:0}
