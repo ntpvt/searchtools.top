@@ -1,24 +1,19 @@
 <html><head><style>html,body{margin:0;padding:0;background:#000;;}</style></head>
 <meta charset="utf-8">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
-<meta name="referrer" content="no-referrer">
-<script>
-xmlhttp=new XMLHttpRequest();
-xmlhttp.open("GET", "http://api.tivi8k.net/viettel/?cid=134&token=3HmXOR_DMksiObpbLluFWg&e=1496389072", false);
-xmlhttp.send();
-link = xmlhttp.responseText;
-</script>
-<body>
+	<body>
 <div style="width: 100%;">
 <div id="player"></div>
 </div>
 <script>
+
 	player = new Clappr.Player({
-								source: link,
+								source: "http://27.67.80.6:18080/134.m3u8?AdaptiveType=HLS&VOD_RequestID=4dfb76f0-5806-42d1-af3f-f4b9341ec872",
 					            parentId: '#player',
 					            width: '100%', height: "100%",
 					            hideMediaControl: true,
-                                mediacontrol: {seekbar: "#ffaa56", buttons: "#ff7f00"},
+								
+								position: 'top-right',
 					            autoPlay: true
 					        });	
 	</script>
