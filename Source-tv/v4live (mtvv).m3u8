@@ -1,0 +1,10 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:12
+#EXT-X-MEDIA-SEQUENCE:1476988342
+#EXTINF:12.2,
+http://123.29.70.5/pkg0/channels/vstv251/medium/76/98/83/medium-1476988342.ts?c=vstv251&q=medium&type=tvlive-seg&pkg=pkg0&zn=net&userId=1&deviceId=&location=&p=0&pnode=&rkey=0qtOEwOl1Lg6zIH9
+#EXTINF:12.2,
+http://123.29.70.5/pkg0/channels/vstv251/medium/76/98/83/medium-1476988343.ts?c=vstv251&q=medium&type=tvlive-seg&pkg=pkg0&zn=net&userId=1&deviceId=&location=&p=0&pnode=&rkey=0qtOEwOl1Lg6zIH9
+#EXTINF:12.2,
+http://123.29.70.5/pkg0/channels/vstv251/medium/76/98/83/medium-1476988344.ts?c=vstv251&q=medium&type=tvlive-seg&pkg=pkg0&zn=net&userId=1&deviceId=&location=&p=0&pnode=&rkey=0qtOEwOl1Lg6zIH9
