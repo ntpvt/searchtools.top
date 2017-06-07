@@ -1,4 +1,4 @@
-<html><head><style>html,body{margin:0;margin-top:13px;padding:0;background:#000;;}</style></head>
+<!--<html><head><style>html,body{margin:0;margin-top:13px;padding:0;background:#000;;}</style></head>
 <meta charset="utf-8">
 <meta name="referrer" content="no-referrer">
 <link href="//m.tivi8k.net/jwplayer/cdn.css" rel="stylesheet">
@@ -9,5 +9,20 @@
 	<body>
 <div id="player_player">
 <video id="my_video_1" autoplay="false" class="video-js vjs-16-9 vjs-default-skin" controls preload="auto" height="100%" width="100%" data-setup='{}'></video><script type="text/javascript"> addPlayer('http://api.tivi8k.net/thvli/?channel=thvl1-hd', '-1', '');</script></div>
+</body>
+</html>-->
+<html><head><style>html,body{margin:0;padding:0;background:#000;;}</style>
+<meta charset="utf-8">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+<meta name="referrer" content="no-referrer">
+</head><body><div style="width: 100%;"><div id="player"></div></div>
+<script> player = new Clappr.Player({source: "http://live.csmtalk.vcdn.vn/hls/cb546fb22d539626aa425e614ba23439/15c826c71d3/ngoisao/index.m3u8",
+					            parentId: '#player',
+								mediacontrol: {seekbar: "#15B4E4", buttons: "#15B4E4"},
+					            width: '100%', height: "100%",
+					            hideMediaControl: true,
+								position: 'top-right',
+					            autoPlay: true});</script>
+<img src="sv1.png" style="position:absolute;top:5px;right:10px"/>
 </body>
 </html>
