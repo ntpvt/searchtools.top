@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo</title>
+</head>
+<body>
+    <div id="content">
+        <h2>Ajax Demo with "Loading" Spinner</h2>
+        <p>In this demo, clicking the link below will execute a JavaScript function that gets data using Ajax.  
+        While Ajax is waiting on the data from the web server, a "loading" gif is displayed so that the visitor 
+        waits for the data to be displayed.  In addition to image being displayed, the background is dimmed to keep
+        the user's focus on the image.  An additional div element is sitting between the content and the loader so 
+        that the visitor is not able to interact with the page while the load is occurring.</p>
+        <a href="/articles/1506-how-to-display-image-spinner-ajax-request">Click here to return to the 
+        tutorial.</a><br /><br />
+    
+        <h2>Demo</h2>
+        <a href="javascript: void(0);loadAjax();">Click to load get data via Ajax!</a><br /><br />
+        <div id="results"><!-- Results are displayed here --></div>
+        <div id="fade"></div>
+        <div id="modal">
+            <img id="loader" src="images/loading.gif" />
+        </div>
+    </div>
+</body>
+</html>
