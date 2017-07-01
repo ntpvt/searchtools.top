@@ -15,7 +15,7 @@ function reloadpage() {
 	  $.getJSON("https://hamirex.org/site/api-rate", function( dataprice ) {
 	  var buy=dataprice.sell;
 	  var sell=dataprice.buy;
-	  var curr="VND";
+	  var curr="BTC/VND";
 	  document.getElementById("sell").innerHTML = sell;
 	  document.getElementById("buy").innerHTML = buy;
 	  document.getElementById("curr").innerHTML = curr;
