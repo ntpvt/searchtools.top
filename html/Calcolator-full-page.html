@@ -1,6 +1,91 @@
 <!DOCTYPE html><html class>
 <head>
-<style class=cp-pen-styles>*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-kerning:auto;outline:0}html,body{position:fixed;top:0;left:0;width:100%;height:100%;margin:0;padding:15px;background:#333;-webkit-text-size-adjust:100%}h1{text-align:right;word-break:break-all;font-family:'Source Code Pro',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;font-weight:400;line-height:1;margin:0 0 15px 0;color:white;vertical-align:middle}input{-webkit-appearance:none;appearance:none;color:#333;background:#999;font-weight:bold;border-radius:5px;border:1px solid rgba(0,0,0,.3);box-shadow:inset rgba(0,0,0,.15) 0 -5px 15px;width:calc(25% - 11.25px);margin-left:15px;font-size:32pt;line-height:1;padding:2% 0;float:left;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;cursor:default;font-family:'Source Sans Pro','Open Sans',Roboto,'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue','Myriad Pro','Segoe UI',Myriad,Helvetica,'Lucida Grande','DejaVu Sans Condensed','Liberation Sans','Nimbus Sans L',Tahoma,Geneva,Arial,sans-serif}input:active{border-color:rgba(0,0,0,.75);box-shadow:inset rgba(0,0,0,.75) 0 0 50px}input:nth-child(n+6){margin-top:15px}input:nth-child(18){width:calc(50% - 7.5px)}input:nth-child(4n-2){margin-left:0}input:nth-child(4n+1),input:nth-child(20){color:white;background:orange}@element 'h1' and (max-characters:8){$this{height:eval("window.innerWidth/7")px;line-height:eval("window.innerWidth/7")px;font-size:eval("window.innerWidth/8")pt}}@element 'h1' and (min-characters:9){$this{height:eval("window.innerWidth/7")px;line-height:eval("window.innerWidth/7")px;font-size:eval("window.innerWidth/innerHTML.length")pt}}</style><style class=cp-pen-styles>*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-kerning:auto;outline:0}html,body{position:fixed;top:0;left:0;width:100%;height:100%;margin:0;padding:15px;background:#333;-webkit-text-size-adjust:100%}h1{text-align:right;word-break:break-all;font-family:'Source Code Pro',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;font-weight:400;line-height:1;margin:0 0 15px 0;color:white;vertical-align:middle}input{-webkit-appearance:none;appearance:none;color:#333;background:#999;font-weight:bold;border-radius:5px;border:1px solid rgba(0,0,0,.3);box-shadow:inset rgba(0,0,0,.15) 0 -5px 15px;width:calc(25% - 11.25px);margin-left:15px;font-size:32pt;line-height:1;padding:2% 0;float:left;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;cursor:default;font-family:'Source Sans Pro','Open Sans',Roboto,'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue','Myriad Pro','Segoe UI',Myriad,Helvetica,'Lucida Grande','DejaVu Sans Condensed','Liberation Sans','Nimbus Sans L',Tahoma,Geneva,Arial,sans-serif}input:active{border-color:rgba(0,0,0,.75);box-shadow:inset rgba(0,0,0,.75) 0 0 50px}input:nth-child(n+6){margin-top:15px}input:nth-child(18){width:calc(50% - 7.5px)}input:nth-child(4n-2){margin-left:0}input:nth-child(4n+1),input:nth-child(20){color:white;background:orange}@element 'h1' and (max-characters:8){$this{height:eval("window.innerWidth/7")px;line-height:eval("window.innerWidth/7")px;font-size:eval("window.innerWidth/8")pt}}@element 'h1' and (min-characters:9){$this{height:eval("window.innerWidth/7")px;line-height:eval("window.innerWidth/7")px;font-size:eval("window.innerWidth/innerHTML.length")pt}}</style></head><body>
+<style class="cp-pen-styles">* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+  outline: none;
+}
+html, body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 15px;
+  background: #333;
+  -webkit-text-size-adjust: 100%;
+}
+h1 {
+  text-align: right;
+  word-break: break-all;
+  font-family: 'Source Code Pro', Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 15px 0;
+  color: white;
+  vertical-align: middle;
+}
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  color: #333;
+  background: #999;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.3);
+  box-shadow: inset rgba(0,0,0,.15) 0 -5px 15px;
+  width: calc(25% - 11.25px);
+  margin-left: 15px;
+  font-size: 32pt;
+  line-height: 1;
+  padding: 1% 0;
+  float: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+  font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+}
+input:active {
+  border-color: rgba(0,0,0,.75);
+  box-shadow: inset rgba(0,0,0,.75) 0 0 50px
+}
+input:nth-child(n+6) {
+  margin-top: 15px;
+}
+input:nth-child(18) {
+  width: calc(50% - 7.5px);
+}
+input:nth-child(4n-2) {
+  margin-left: 0;
+}
+input:nth-child(4n+1),
+input:nth-child(20) {
+  color: white;
+  background: orange;
+}
+@element 'h1' and (max-characters: 8) {
+  $this {
+    height: eval("window.innerWidth/7")px;
+    line-height: eval("window.innerWidth/7")px;
+    font-size: eval("window.innerWidth/8")pt;
+  }
+}
+@element 'h1' and (min-characters: 9) {
+  $this {
+    height: eval("window.innerWidth/7")px;
+    line-height: eval("window.innerWidth/7")px;
+    font-size: eval("window.innerWidth/innerHTML.length")pt;
+  }
+}</style></head><body>
 <h1 id=display></h1>
 <input type=button data-function=reset() value=C>
 <input type=button data-function=plusMinus() value=±>
@@ -21,6 +106,10 @@
 <input type=button data-function=num(0) value=0>
 <input type=button data-function=num('.') value=.>
 <input type=button data-function=equals() value==>
-<script src=//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.2.1/EQCSS.min.js></script>
+<script type="text/javascript">// <![CDATA[
+"use strict";"object"!=typeof window.CP&&(window.CP={}),window.CP.PenTimer={programNoLongerBeingMonitored:!1,timeOfFirstCallToShouldStopLoop:0,_loopExits:{},_loopTimers:{},START_MONITORING_AFTER:2e3,STOP_ALL_MONITORING_TIMEOUT:5e3,MAX_TIME_IN_LOOP_WO_EXIT:2200,exitedLoop:function(o){this._loopExits[o]=!0},shouldStopLoop:function(o){if(this.programKilledSoStopMonitoring)return!0;if(this.programNoLongerBeingMonitored)return!1;if(this._loopExits[o])return!1;var t=this._getTime();if(0===this.timeOfFirstCallToShouldStopLoop)return this.timeOfFirstCallToShouldStopLoop=t,!1;var i=t-this.timeOfFirstCallToShouldStopLoop;if(i<this.START_MONITORING_AFTER)return!1;if(i>this.STOP_ALL_MONITORING_TIMEOUT)return this.programNoLongerBeingMonitored=!0,!1;try{this._checkOnInfiniteLoop(o,t)}catch(o){return this._sendErrorMessageToEditor(),this.programKilledSoStopMonitoring=!0,!0}return!1},_sendErrorMessageToEditor:function(){try{if(this._shouldPostMessage()){var o={action:"infinite-loop",line:this._findAroundLineNumber()};parent.postMessage(JSON.stringify(o),"*")}else this._throwAnErrorToStopPen()}catch(o){this._throwAnErrorToStopPen()}},_shouldPostMessage:function(){return document.location.href.match(/boomerang/)},_throwAnErrorToStopPen:function(){throw"We found an infinite loop in your Pen. We've stopped the Pen from running. Please correct it or contact support@codepen.io."},_findAroundLineNumber:function(){var o=new Error,t=0;if(o.stack){var i=o.stack.match(/boomerang\S+:(\d+):\d+/);i&&(t=i[1])}return t},_checkOnInfiniteLoop:function(o,t){if(!this._loopTimers[o])return this._loopTimers[o]=t,!1;var i=t-this._loopTimers[o];if(i>this.MAX_TIME_IN_LOOP_WO_EXIT)throw"Infinite Loop found on loop: "+o},_getTime:function(){return+new Date}},window.CP.shouldStopExecution=function(o){var t=window.CP.PenTimer.shouldStopLoop(o);return t===!0&&console.warn("[CodePen]: An infinite loop (or a loop taking too long) was detected, so we stopped its execution. Sorry!"),t},window.CP.exitedLoop=function(o){window.CP.PenTimer.exitedLoop(o)};
+//]]></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.2.1/EQCSS.min.js"></script>
 <script>var buttons=document.querySelectorAll("input[type=button]"),display=document.getElementById("display"),equation="0",history={tape:[]};function reset(){equation="";update(0)}function plusMinus(){if(equation.substring(0,1)=="+"){equation="-"+equation.substring(1,equation.length)}else{if(equation.substring(0,1)=="-"){equation="+"+equation.substring(1,equation.length)}else{equation="-"+equation}}update()}function backspace(){if(equation.length>=0){if(equation.length>1){equation=equation.substring(0,equation.length-1)}else{equation=""+0}}update()}function num(a){if(equation==0){equation=""+a}else{equation+=a}update()}function operation(a){var b=equation.substring(equation.length-1);if(b!=="+"&&b!=="-"&&b!=="*"&&b!=="/"){if(a=="add"){equation+="+"}if(a=="subtract"){equation+="-"}if(a=="multiply"){equation+="*"}if(a=="divide"){equation+="/"}}update()}function equals(){if(history.tape==""){history.tape=equation}else{history.tape+=","+equation}equation=display.innerHTML=""+eval(equation)}function update(a){if(a==undefined){display.innerHTML=(equation.replace(/\*/g,"×").replace(/\//g,"÷"))}else{display.innerHTML=a}EQCSS.apply()}document.onkeyup=function(b){b.preventDefault();var a=b.which;a==49&&num(1);a==50&&num(2);a==51&&num(3);a==52&&num(4);a==53&&num(5);a==54&&num(6);a==55&&num(7);a==56&&num(8);a==57&&num(9);a==48&&num(0);a==46&&num(".");a==43&&operation("add");a==45&&operation("subtract");(a==120||a==42)&&operation("multiply");a==47&&operation("divide");a==27&&reset();a==13&&equals();a==8&&backspace()};document.body.addEventListener("touchmove",function(a){a.preventDefault()});for(i=0;i<buttons.length;i++){if(window.CP.shouldStopExecution(1)){break}buttons[i].addEventListener("touchstart",function(e){e.preventDefault();eval(this.getAttribute("data-function"))});buttons[i].addEventListener("click",function(e){e.preventDefault();eval(this.getAttribute("data-function"))})}window.CP.exitedLoop(1);update();</script>
 </body></html>
+<br/><br/>
