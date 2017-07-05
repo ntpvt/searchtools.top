@@ -1,0 +1,449 @@
+<!DOCTYPE html><html class=''>
+<head>
+<style class="cp-pen-styles">::-moz-selection {
+  background: black;
+}
+
+::selection {
+  background: black;
+}
+
+body {
+  background-color: #4a616f;
+}
+
+@font-face {
+  font-family: digital;
+  src: url(http://fontsforweb.com/public/fonts/1091/DSDIGI.ttf);
+}
+.calc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 510px;
+  background: #afa996;
+  padding: 20px;
+}
+
+.window {
+  position: relative;
+  overflow: hidden;
+  width: 470px;
+  height: 126px;
+  background: #8a8269;
+  border-radius: 6px;
+}
+
+.result {
+  font-family: digital;
+  z-index: 100;
+  position: absolute;
+  background-color: #171717;
+  width: 470px;
+  height: 110px;
+  border-radius: 6px;
+  -webkit-transform: perspective(120px) rotateX(-10deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  outline: none;
+  border: none;
+}
+
+.readout, .placehold {
+  position: absolute;
+  text-align: right;
+  left: -50px;
+  width: 470px;
+  height: 110px;
+  font-size: 46px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #09ff88;
+}
+.readout::-webkit-input-placeholder, .placehold::-webkit-input-placeholder {
+  color: rgba(9, 255, 136, 0.1);
+}
+.readout::-moz-placeholder, .placehold::-moz-placeholder {
+  color: rgba(9, 255, 136, 0.1);
+}
+.readout:-ms-input-placeholder, .placehold:-ms-input-placeholder {
+  color: rgba(9, 255, 136, 0.1);
+}
+.readout::placeholder, .placehold::placeholder {
+  color: rgba(9, 255, 136, 0.1);
+}
+
+.plane {
+  z-index: 90;
+  position: absolute;
+  bottom: 0;
+  background: #a29b85;
+  width: 470px;
+  height: 110px;
+  border-radius: 6px;
+  -webkit-transform: perspective(42px) rotateX(10deg);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.section {
+  background: #000;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.one {
+  vertical-align: top;
+  width: 68px;
+  margin-right: 20px;
+}
+
+.two {
+  vertical-align: top;
+  width: 207px;
+}
+
+.three {
+  vertical-align: top;
+  width: 136px;
+  float: right;
+}
+
+.key {
+  vertical-align: top;
+  cursor: pointer;
+  display: inline-block;
+  margin: 3px;
+  margin-right: 0;
+  width: 62px;
+  height: 62px;
+  background: #343536;
+  border: none;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.key:hover {
+  box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+.key:focus {
+  outline: none !important;
+}
+.key_red {
+  display: inline-block;
+  margin: 3px;
+  width: 62px;
+  height: 62px;
+  background: #db4343;
+  border: none;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.key_red:hover {
+  box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+.key_red:focus {
+  outline: none !important;
+}
+.key_long {
+  cursor: pointer;
+  display: inline-block;
+  margin: 3px;
+  margin-right: 0;
+  width: 132px;
+  height: 62px;
+  background: #343536;
+  border: none;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.key_long:hover {
+  box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+.key_long:focus {
+  outline: none !important;
+}
+.key_vertical {
+  cursor: pointer;
+  margin: 3px;
+  width: 62px;
+  height: 132px;
+  background: #343536;
+  float: right;
+  border: none;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.key_vertical:hover {
+  box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+.key_vertical:focus {
+  outline: none !important;
+}
+.key_before {
+  display: inline-block;
+  color: white;
+  font-family: Arial;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: -webkit-linear-gradient(top, #343536 0%, #343536 60%, #484b4d 100%);
+  background: linear-gradient(top, #343536 0%, #343536 60%, #484b4d 100%);
+  border-radius: 12px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75), inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+.key_before_long {
+  display: inline-block;
+  color: white;
+  font-family: Arial;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  background: -webkit-linear-gradient(top, #343536 0%, #343536 60%, #484b4d 100%);
+  background: linear-gradient(top, #343536 0%, #343536 60%, #484b4d 100%);
+  border-radius: 12px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75), inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+.key_before_vertical {
+  display: inline-block;
+  box-sizing: border-box;
+  color: white;
+  font-family: Arial;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+  height: 110px;
+  padding-top: 30px;
+  line-height: 40px;
+  background: -webkit-linear-gradient(top, #343536 0%, #343536 60%, #484b4d 100%);
+  background: linear-gradient(top, #343536 0%, #343536 60%, #484b4d 100%);
+  border-radius: 12px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75), inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+.key_before_red {
+  display: inline-block;
+  color: white;
+  font-family: Arial;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: -webkit-linear-gradient(top, #db4343 0%, #db4343 60%, #f06d6d 100%);
+  background: linear-gradient(top, #db4343 0%, #db4343 60%, #f06d6d 100%);
+  border-radius: 12px;
+  box-shadow: 0 5px 5px rgba(115, 32, 32, 0.75), inset 0 0 3px rgba(154, 48, 48, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.btm-part {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  background: #8a8269;
+  display: inline-block;
+  left: 0;
+  bottom: -40px;
+  border-radius: 0 0 10px 10px;
+  -webkit-transform: perspective(200px) rotateX(-10deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.top-part {
+  position: absolute;
+  height: 140px;
+  width: 100%;
+  background: #999179;
+  display: inline-block;
+  left: 0;
+  top: -140px;
+  border-radius: 10px 10px 0 0;
+  -webkit-transform: perspective(300px) rotateX(10deg);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+.top-part a {
+  text-decoration: none;
+  padding: 20px;
+  font-size: 12px;
+  font-family: 'Russo One', sans-serif;
+  position: absolute;
+  color: #625c4a;
+  bottom: 0;
+  text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.back-toppart {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.4;
+  width: 280px;
+  height: 60px;
+  background: -webkit-linear-gradient(left, #000000 0%, #000000 40%, transparent 40%, transparent 90%, transparent 90%, #000000 90%, #000000 100%, #000000 100%);
+  background: linear-gradient(to right, #000000 0%, #000000 40%, transparent 40%, transparent 90%, transparent 90%, #000000 90%, #000000 100%, #000000 100%);
+  background-size: 12px;
+}
+</style></head><body>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<div class="calc" ng-app="appleCalculator" ng-controller="Calculator">
+			<div class="top-part">
+
+
+<div class="back-toppart"></div>
+			</div>
+			<div class="window">
+				<div class="result">
+					<input class="readout" readonly disabled ng-model="console" maxlength="10">
+					<input class="placehold" type='readonly' disabled placeholder="88888888888888888">
+				</div>
+				<div class="plane"></div>
+			</div>
+			<div class="section one">
+				<button class="key" ng-click="clearTotal()"><div class="key_before">СП</div></button>
+				<button class="key"><div class="key_before">П+</div></button>
+				<button class="key"><div class="key_before">ИП</div></button>
+				<button class="key_red" ng-click="clearTotal()"><div class="key_before_red">Сх</div></button>
+			</div>
+			<div class="section two">
+				<button class="key" ng-click="print(7)"><div class="key_before">7</div></button>
+				<button class="key" ng-click="print(8)"><div class="key_before">8</div></button>
+				<button class="key" ng-click="print(9)"><div class="key_before">9</div></button>
+				<button class="key" ng-click="print(4)"><div class="key_before">4</div></button>
+				<button class="key" ng-click="print(5)"><div class="key_before">5</div></button>
+				<button class="key" ng-click="print(6)"><div class="key_before">6</div></button>
+				<button class="key" ng-click="print(1)"><div class="key_before">1</div></button>
+				<button class="key" ng-click="print(2)"><div class="key_before">2</div></button>
+				<button class="key" ng-click="print(3)"><div class="key_before">3</div></button>
+
+				<button class="key_long" ng-click="print(0)"><div class="key_before_long">0</div></button>
+				<button class="key" ng-click="print('.')"><div class="key_before">,</div></button>
+			</div>
+			<div class="section three">
+				<button class="key" ng-click="add()"><div class="key_before">+</div></button>
+				<button class="key" ng-click="getPercentage()"><div class="key_before">%</div></button>
+				<button class="key" ng-click="subtract()"><div class="key_before">-</div></button>
+				<button class="key" ng-click="changePositivity()"><div class="key_before">/-/</div></button>
+				<button class="key_vertical" ng-click="equal()"><div class="key_before_vertical">=</div></button>
+				<button class="key" ng-click="multiply()"><div class="key_before">×</div></button>
+				<button class="key" ng-click="divide()"><div class="key_before">÷</div></button>
+			</div>
+			<div class="btm-part"></div>
+		</div>
+	</body>
+</html>	
+<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js'></script>
+<script>//Code from https://codepen.io/sfrisk/pen/BymJer
+
+angular.module('appleCalculator', [])
+  .controller('Calculator', ['$scope', Calculator]);
+
+function Calculator($scope) {
+  $scope.console = 0;
+  
+  var _total = 0;
+  var _state = null;
+  
+  function _resolveState(){
+    switch(_state) {
+      case 'ADD':
+        _total +=  parseFloat($scope.console);
+        $scope.console = 0;
+        break;
+      case 'SUB':
+        _total -=  parseFloat($scope.console);
+        $scope.console = 0;
+        break;
+      case 'MULT':
+        _total *=  parseFloat($scope.console);
+        $scope.console = 0;
+        break;
+      case 'DIV':
+        _total /=  parseFloat($scope.console);
+        $scope.console = 0;
+        break;
+
+      default:
+         _total = parseFloat($scope.console);
+        $scope.console = 0;
+         break;
+        
+    }
+  }  
+  $scope.add = function() {
+ 		_resolveState();
+    _state = 'ADD';
+  }
+  
+  $scope.subtract = function() {
+ 		_resolveState();
+    _state = 'SUB';
+  }
+  
+  $scope.multiply = function() {
+ 		_resolveState();
+    _state = 'MULT';
+  }
+  
+  $scope.divide = function() {
+ 		_resolveState();
+    _state = 'DIV';
+  }
+  
+  $scope.equal = function() {
+ 		_resolveState();
+    $scope.console = _total;
+    _state = 'EQ';
+  }
+  
+  $scope.print = function(n) {
+    if($scope.console.toString() == "0" || _state == 'EQ'){
+      $scope.console = "";
+    }
+    if( _state == 'EQ'){
+      _state = null;
+    }
+    $scope.console = $scope.console + n;
+  }
+  
+  $scope.changePositivity = function() {
+    $scope.console = (parseFloat($scope.console) * -1).toString();
+  }
+  
+  $scope.getPercentage = function() {
+    $scope.console = (parseFloat($scope.console) * .01).toString();
+  }
+  
+  $scope.clearTotal = function() {
+    $scope.console = 0;   
+    _total = 0;
+    _state = null;
+  }
+  
+}
+//# sourceURL=pen.js
+</script>
+</body></html>
