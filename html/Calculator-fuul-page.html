@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+<title>CodePen - Day 042: Calculator</title>
+<style>@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);.caculator-body,.calculation{user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-o-user-select:none}html{box-sizing:border-box}html,body{width:100%;height:100%}body{background:-moz-linear-gradient(top,#0eebff 0,#b55abc 80%);background:-webkit-gradient(left top,left bottom,color-stop(0%,#0eebff),color-stop(80%,#b55abc));background:-webkit-linear-gradient(top,#0eebff 0,#b55abc 80%);background:linear-gradient(top,#0eebff 0,#b55abc 80%);font-family:'Open Sans Condensed',Helvetica,Arial,sans-serif;color:#fff}*,*:before,*:after{box-sizing:inherit;margin:0;padding:0}.caculator-body{width:100%;position:absolute;bottom:0}.result,.calculation{display:flex;justify-content:center;align-items:center;max-width:95%;margin:0 auto;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.result{height:20vh;font-size:14vh;position:relative}.result:empty+.calculation::before{display:none}.calculation{position:relative;height:10vh;font-size:1.2em;font-size:3vh;letter-spacing:1px}.calculation:before{display:block;content:'=';position:absolute;left:50%;top:0;font-size:1.2em;font-size:3vh;width:3em;text-align:center;margin-left:-1.5em}.main{width:75%;float:left}.main+aside{width:25%;float:left}button{display:block;outline:0;padding:0;margin:0 0 2px 0;float:left;border:0;background:transparent;position:relative;height:6em;height:13vh;color:inherit;font-size:1.8em;font-size:4vh;cursor:pointer}button>span{display:flex;height:100%;justify-content:center;align-items:center;margin:0 2px 0 0;background:rgba(248,237,151,0.2)}button>span:hover,button>span:focus,button>span:active{background:rgba(248,237,151,0.1)}sub,sup{transform:scale(0.6)}button::-moz-focus-inner{padding:0;border:0}aside button{width:100%}aside button>span{margin-right:0}section.controls,.numblock{width:100%;overflow:hidden}section.controls button,.numblock button{width:33.33%}section.controls button:last-child,.numblock button:last-child{margin-bottom:0}section.controls .zero,.numblock .zero{width:66.66%;margin-bottom:0}section.controls .zero span span,.numblock .zero span span{width:50%;position:absolute;left:0;top:50%;transform:translate(0,-50%)}</style>
+</head>
+<body translate="no" >
+<div class="calculator">
+<header>
+<section class="result"></section>
+<section class="calculation"></section>
+</header>
+<section class="caculator-body">
+<section class="main">
+<section class="controls">
+<button class="clear"><span>C</span</button>
+<button data-sign="n" class="sign"><span><sup>+</sup>/<sub>&ndash;</sub></span></button>
+<button class="percent"><span>%</span></button>
+</section>
+<section class="numblock">
+<button><span>7</span></button>
+<button><span>8</span></button>
+<button><span>9</span></button>
+<button><span>4</span></button>
+<button><span>5</span></button>
+<button><span>6</span></button>
+<button><span>1</span></button>
+<button><span>2</span></button>
+<button><span>3</span></button>
+<button class="zero"><span><span>0<span></span></button>
+<button data-sign="."><span>,</span></button>
+</section>
+</section>
+<aside class="controls">
+<button data-sign="/" class="divide"><span>÷</span></button>
+<button data-sign="*" class="multiplicate"><span>&times;</span></button>
+<button data-sign="-" class="minus"><span>&ndash;</span></button>
+<button data-sign="+" class="plus"><span>+</span></button>
+<button class="equals"><span>=</span></button>
+</aside>
+</section>
+</div>
+<script>/*<![CDATA[*/"use strict";"object"!=typeof window.CP&&(window.CP={}),window.CP.PenTimer={programNoLongerBeingMonitored:!1,timeOfFirstCallToShouldStopLoop:0,_loopExits:{},_loopTimers:{},START_MONITORING_AFTER:2000,STOP_ALL_MONITORING_TIMEOUT:5000,MAX_TIME_IN_LOOP_WO_EXIT:2200,exitedLoop:function(a){this._loopExits[a]=!0},shouldStopLoop:function(c){if(this.programKilledSoStopMonitoring){return !0}if(this.programNoLongerBeingMonitored){return !1}if(this._loopExits[c]){return !1}var b=this._getTime();if(0===this.timeOfFirstCallToShouldStopLoop){return this.timeOfFirstCallToShouldStopLoop=b,!1}var a=b-this.timeOfFirstCallToShouldStopLoop;if(a<this.START_MONITORING_AFTER){return !1}if(a>this.STOP_ALL_MONITORING_TIMEOUT){return this.programNoLongerBeingMonitored=!0,!1}try{this._checkOnInfiniteLoop(c,b)}catch(c){return this._sendErrorMessageToEditor(),this.programKilledSoStopMonitoring=!0,!0}return !1},_sendErrorMessageToEditor:function(){try{if(this._shouldPostMessage()){var a={action:"infinite-loop",line:this._findAroundLineNumber()};parent.postMessage(JSON.stringify(a),"*")}else{this._throwAnErrorToStopPen()}}catch(a){this._throwAnErrorToStopPen()}},_shouldPostMessage:function(){return document.location.href.match(/boomerang/)},_throwAnErrorToStopPen:function(){throw"We found an infinite loop in your Pen. We've stopped the Pen from running. Please correct it or contact support@codepen.io."},_findAroundLineNumber:function(){var c=new Error,b=0;if(c.stack){var a=c.stack.match(/boomerang\S+:(\d+):\d+/);a&&(b=a[1])}return b},_checkOnInfiniteLoop:function(c,b){if(!this._loopTimers[c]){return this._loopTimers[c]=b,!1}var a=b-this._loopTimers[c];if(a>this.MAX_TIME_IN_LOOP_WO_EXIT){throw"Infinite Loop found on loop: "+c}},_getTime:function(){return +new Date}},window.CP.shouldStopExecution=function(b){var a=window.CP.PenTimer.shouldStopLoop(b);return a===!0&&console.warn("[CodePen]: An infinite loop (or a loop taking too long) was detected, so we stopped its execution. Sorry!"),a},window.CP.exitedLoop=function(a){window.CP.PenTimer.exitedLoop(a)};/*]]>*/</script>
+<script>/*<![CDATA[*/(function(){var keys=document.querySelectorAll("button"),resultBox=document.querySelector(".result"),calcBox=document.querySelector(".calculation"),operators=["+","-","x","÷"],lastChar=false,hasOperator=false,term="",calc;function isNumber(val){return Number(parseInt(val,10))==val}function calculator(){var sign,val=this.textContent;if(isNumber(val)){if(term.length==1&&(val==0&&lastChar==0)){return}if(term.length==1&&lastChar==0){term=""}term+=val;displayTerm(term);lastChar=val}else{if(term.length){sign=(this.getAttribute("data-sign"))?this.getAttribute("data-sign").trim():val.trim();switch(sign){case"-":case"*":case"/":case"+":if(operators.indexOf(lastChar)===-1){hasOperator=true;lastChar=sign;term+=" "+sign+" ";displayTerm(term)}break;case".":if(operators.indexOf(lastChar)===-1&&lastChar!="."){lastChar=sign;term+=sign;displayTerm(term)}break;case"%":var temp=term.split(" ");temp[(temp.length-1)]=(temp[(temp.length-1)]/100);term=temp.join(" ");displayTerm(term);break;case"n":var temp=term.split(" ");if(temp[(temp.length-1)].substring(0,1)==="-"){temp[(temp.length-1)]=temp[(temp.length-1)].substring(1,temp[(temp.length-1)].length)}else{temp[(temp.length-1)]="-"+temp[(temp.length-1)]}term=temp.join(" ");displayTerm(term);break;case"C":hasOperator=false;lastChar=false;term="";resultBox.innerHTML="";calcBox.innerHTML="";break;case"=":if(hasOperator&&(operators.indexOf(lastChar)===-1)){try{calc=eval(term);resultBox.innerHTML=parseFloat(calc.toPrecision(12))}catch(e){}}break}}}}function displayTerm(term){str=term.replace(/\./g,",").replace(/\//g,"÷").replace(/\*/g,"&times;").replace(/-\s/g,"&ndash; ");calcBox.innerHTML=str}for(var i=0;i<keys.length;i++){if(window.CP.shouldStopExecution(1)){break}keys[i].addEventListener("click",calculator)}window.CP.exitedLoop(1)})();/*]]>*/</script>
+</body></html>
