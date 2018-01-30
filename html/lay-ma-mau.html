@@ -1,0 +1,36 @@
+<html><head><script type="text/javascript" src="http://tools.ngoisaoso.vn/jscolor/jscolor.js">
+</script>
+</head><body><h1>Công cụ lấy mã màu
+</h1>
+<hr>
+<h4>Lấy mã màu thông thường
+</h4>
+<input class="color" value="66ff00" autocomplete="off" style="background-image: none; background-color: rgb(102, 255, 0); color: rgb(0, 0, 0);">
+<hr>
+<h4>Lấy mã màu bao gồm RGB và HSV
+</h4>
+R
+<input id="red" size="5">
+G
+<input id="grn" size="5">
+B
+<input id="blu" size="5">
+- - -
+H
+<input id="hue" size="5">
+S
+<input id="sat" size="5">
+V
+<input id="val" size="5">
+<p>
+  Chọn màu cần lấy:
+  <input class="color" id="myColor" onchange="
+                                              document.getElementById('red').value = this.color.rgb[0]*100 + '%';
+                                              document.getElementById('grn').value = this.color.rgb[1]*100 + '%';
+                                              document.getElementById('blu').value = this.color.rgb[2]*100 + '%';
+                                              document.getElementById('hue').value = this.color.hsv[0]* 60 + '°';
+                                              document.getElementById('sat').value = this.color.hsv[1]*100 + '%';
+                                              document.getElementById('val').value = this.color.hsv[2]*100 + '%';" autocomplete="off" style="background-image: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+</p><hr>
+<script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true">
+</script></body></html>
